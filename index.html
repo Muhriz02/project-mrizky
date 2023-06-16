@@ -1,26 +1,125 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub</title>
-    <style>
-    </style>
+    <title>My GitHub Pages</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:ital@1&display=swap" rel="stylesheet">
+    
 </head>
 <body>
-    <header>
-        <div class="navbar">
-            <div class="logo"><a href="#">GitHub Pages</a></div>
-            <ul class="links">
-                <li><a href="hero">Home</a></li>
-                <li><a href="about">About</a></li>
-                <li><a href="project">Project</a></li>
-                <li><a href="contact">Contact</a></li>
-            </ul>
-            <a href="#" class="action_btn">Get Started</a>
-            <div class="toggle_btn"></div>
+    <section id="banner">
+        <img src="images/GitHub-logo.png" class="logo">
+        <div class="banner-text">
+            <h1>GitHub Pages</h1>
+            <p>Hello! This Is My GitHub Pages</p>
+            <div class="banner-btn">
+                <a href="#"><span></span>Find Out</a>
+                <a href="#"><span></span>Read More</a>
+            </div>
         </div>
-    </header>
+    </section>
+
+    <div id="sideNav">
+        <nav>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">Project</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="menuBtn">
+        <img src="images/barMenu.png" id="menu">
+    </div>
+
+    <!-- PROJECT -->
+    <section id="project">
+        <div class="title-text">
+            <p>PROJECT</p>
+            <h1>All of My Work</h1>
+        </div>
+
+        <div class="project-box">
+            <div class="all-project">
+                <img src="images/snakeGames.png">
+                <div class="overlay"></div>
+                <div class="project_description">
+                    <h3>Snake Game</h3>
+                    <hr>
+                    <p>The player controls a long, thin creature, resembling a snake, which roams around on a bordered plane, picking up food (or some other item), trying to avoid hitting its own tail or the edges of the playing area. Each time the snake eats a piece of food, its tail grows longer, making the game increasingly difficult.</p>
+                </div>
+            </div>
+            <div class="all-project">
+                <img src="images/birdGame.png">
+                <div class="overlay"></div>
+                <div class="project_description">
+                    <h3>FlappyBird Game</h3>
+                    <hr>
+                    <p>players control a bird that automatically falls to the ground, and to prevent this bird from falling, players need to touch the screen to make the bird flap upward. There are pipes coming from the right-hand side of the screen, and there's only a small gap left for the bird to go through.</p>
+                </div>
+            </div>
+            <div class="all-project">
+                <img src="images/trashGames.png">
+                <div class="overlay"></div>
+                <div class="project_description">
+                    <h3>Trash Game</h3>
+                    <hr>
+                    <p>This game introduces young learners to the concept of proper waste segregation. Pick up as many recyclable items as you can</p>
+                </div>
+            </div>
+            <div class="all-project">
+                <img src="images/hangmangames.jpg">
+                <div class="overlay"></div>
+                <div class="project_description">
+                    <h3>Hangman Game</h3>
+                    <hr>
+                    <p>a word game in which one player has to guess a word that the other player has thought of, by guessing the letters in it. Every time they guess a wrong letter, part of a picture of a person being hanged is drawn, and if the picture is completed the person guessing has lost.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <section id="footer">
+        <div class="title-text">
+            <p>Contact</p>
+            <h1>This is My Contact</h1>
+        </div>
+        <div class="footer-row">
+            <div class="footer-text">
+                <h1>You Can Contact Me With</h1>
+                <p>#30 abc Palembang, xyz Kota IN <i class="fa fa-map-marker"></i></p>
+                <p>example@website.com <i class="fa fa-paper-plane"></i></p>
+                <p>0812345678 <i class="fa fa-phone"></i></p>
+            </div>
+        </div>
+
+        <div class="social-links">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-youtube"></i>
+        </div>
+    </section>
+
+    <script>
+        var menuBtn = document.getElementById("menuBtn")
+        var sideNav = document.getElementById("sideNav")
+        var menu = document.getElementById("menu")
+
+        sideNav.style.right == "-250px";
+
+        menuBtn.onclick = function () {
+            if (sideNav.style.right == "-250px") {
+                sideNav.style.right = "0";
+                menu.src = "images/closeMenu.png";
+            }
+            else{
+                sideNav.style.right = "-250px";
+                menu.src = "images/barMenu.png";
+            }
+        }
+    </script>
 </body>
 </html>
